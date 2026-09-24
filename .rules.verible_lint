@@ -1,3 +1,5 @@
 -line-length
 -no-tabs
 -parameter-name-style
+-unpacked-dimensions-range-ordering
+-explicit-parameter-storage-type
