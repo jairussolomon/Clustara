@@ -1,0 +1,56 @@
+make -C sw
+make[1]: Entering directory '/home/jairussolomon/Desktop/Clustara/sw'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jairussolomon/Desktop/Clustara/sw'
+./scripts/run_regression.sh
+PASS add
+PASS addi
+PASS and
+PASS andi
+PASS auipc
+PASS beq
+PASS bge
+PASS bgeu
+PASS blt
+PASS bltu
+PASS bne
+PASS div
+PASS divu
+PASS j
+PASS jal
+PASS jalr
+PASS lb
+PASS lbu
+PASS lh
+PASS lhu
+PASS lui
+PASS lw
+PASS mul
+PASS mulh
+PASS mulhsu
+PASS mulhu
+PASS or
+PASS ori
+PASS rem
+PASS remu
+PASS sb
+PASS sh
+PASS simple
+PASS sll
+PASS slli
+PASS slt
+PASS slti
+PASS sra
+PASS srai
+PASS srl
+PASS srli
+PASS sub
+PASS sw
+PASS xor
+PASS xori
+
+----------------------------------------
+passed  : 45
+failed  : 0
+wall time: 201s
+----------------------------------------

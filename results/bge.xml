@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1790271084" />
+    <testcase name="run_single_test" classname="test_picorv32" file="/home/jairussolomon/Desktop/Clustara/tb/test_picorv32.py" lineno="26" time="0.23768067359924316" sim_time_ns="15780.001" ratio_time="66391.60332659983" />
+  </testsuite>
+</testsuites>

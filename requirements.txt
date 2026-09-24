@@ -1,0 +1,10 @@
+# Clustara: pinned Python dependencies.
+#
+# Pinned on purpose. The CI runner and every Kubernetes pod must install
+# exactly these versions, otherwise the regression result depends on
+# which machine ran it.
+#
+# cocotb is held at the 1.9 line for now. cocotb 2.x changed parts of the
+# API, so we move to it only after the pipeline is green end to end.
+cocotb==1.9.2
+pytest==8.3.4
