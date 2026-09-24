@@ -1,0 +1,35 @@
+name: RTL CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/jairussolomon/clustara-verif:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Lint
+        run: make lint
+
+      - name: Build test hex images
+        run: make sw
+
+      - name: Run regression
+        run: make regression
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-results
+          path: results/
