@@ -1,0 +1,160 @@
+make -C sw
+make[1]: Entering directory '/work/sw'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/work/sw'
+make -C sw
+make[1]: Entering directory '/work/sw'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/work/sw'
+make -C tb TEST_NAME=add
+make[1]: Entering directory '/work/tb'
+rm -f /work/results/add.xml
+"make" -f Makefile /work/results/add.xml
+make[2]: Entering directory '/work/tb'
+mkdir -p /work/sim_build
+/usr/local/bin/verilator -cc --exe -Mdir /work/sim_build -DCOCOTB_SIM=1 --top-module tb_top --timescale 1ns/1ps --vpi --public-flat-rw --prefix Vtop -o Vtop -LDFLAGS "-Wl,-rpath,/usr/local/lib/python3.12/dist-packages/cocotb/libs -L/usr/local/lib/python3.12/dist-packages/cocotb/libs -lcocotbvpi_verilator" -Wno-fatal /work/rtl/tb_top.v /work/third_party/picorv32/picorv32.v /usr/local/lib/python3.12/dist-packages/cocotb/share/lib/verilator/verilator.cpp
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'mem_la_read'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:103:20: ... Location of port declaration
+  103 |  output            mem_la_read,
+      |                    ^~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.030
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'mem_la_write'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:104:20: ... Location of port declaration
+  104 |  output            mem_la_write,
+      |                    ^~~~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'mem_la_addr'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:105:20: ... Location of port declaration
+  105 |  output     [31:0] mem_la_addr,
+      |                    ^~~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'mem_la_wdata'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:106:20: ... Location of port declaration
+  106 |  output reg [31:0] mem_la_wdata,
+      |                    ^~~~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'mem_la_wstrb'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:107:20: ... Location of port declaration
+  107 |  output reg [ 3:0] mem_la_wstrb,
+      |                    ^~~~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_valid'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:110:20: ... Location of port declaration
+  110 |  output reg        pcpi_valid,
+      |                    ^~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_insn'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:111:20: ... Location of port declaration
+  111 |  output reg [31:0] pcpi_insn,
+      |                    ^~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_rs1'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:112:20: ... Location of port declaration
+  112 |  output     [31:0] pcpi_rs1,
+      |                    ^~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_rs2'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:113:20: ... Location of port declaration
+  113 |  output     [31:0] pcpi_rs2,
+      |                    ^~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_wr'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:114:20: ... Location of port declaration
+  114 |  input             pcpi_wr,
+      |                    ^~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_rd'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:115:20: ... Location of port declaration
+  115 |  input      [31:0] pcpi_rd,
+      |                    ^~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_wait'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:116:20: ... Location of port declaration
+  116 |  input             pcpi_wait,
+      |                    ^~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'pcpi_ready'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:117:20: ... Location of port declaration
+  117 |  input             pcpi_ready,
+      |                    ^~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'irq'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:120:20: ... Location of port declaration
+  120 |  input      [31:0] irq,
+      |                    ^~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'eoi'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:121:20: ... Location of port declaration
+  121 |  output reg [31:0] eoi,
+      |                    ^~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'trace_valid'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:158:20: ... Location of port declaration
+  158 |  output reg        trace_valid,
+      |                    ^~~~~~~~~~~
+%Warning-PINMISSING: /work/rtl/tb_top.v:106:4: Cell has missing pin: 'trace_data'
+  106 |  ) cpu (
+      |    ^~~
+                     /work/third_party/picorv32/picorv32.v:159:20: ... Location of port declaration
+  159 |  output reg [35:0] trace_data
+      |                    ^~~~~~~~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.030 2024-10-27 rev v5.030
+- Verilator: Built from 0.114 MB sources in 10 modules, into 0.377 MB in 9 C++ files needing 0.000 MB
+- Verilator: Walltime 0.310 s (elab=0.023, cvt=0.082, bld=0.000); cpu 0.309 s on 1 threads; alloced 13.562 MB
+make -C /work/sim_build  -f Vtop.mk
+make[3]: Entering directory '/work/sim_build'
+g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -Os  -c -o verilator.o /usr/local/lib/python3.12/dist-packages/cocotb/share/lib/verilator/verilator.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_dpi.o /usr/local/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_vpi.o /usr/local/share/verilator/include/verilated_vpi.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o verilated_threads.o /usr/local/share/verilator/include/verilated_threads.cpp
+python3 /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtop.cpp Vtop___024root__DepSet_h84412442__0.cpp Vtop___024root__DepSet_heccd7ead__0.cpp Vtop__Dpi.cpp Vtop__ConstPool_0.cpp Vtop___024root__Slow.cpp Vtop___024root__DepSet_h84412442__0__Slow.cpp Vtop___024root__DepSet_heccd7ead__0__Slow.cpp Vtop__Syms.cpp > Vtop__ALL.cpp
+g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable      -c -o Vtop__ALL.o Vtop__ALL.cpp
+echo "" > Vtop__ALL.verilator_deplist.tmp
+g++    verilator.o verilated.o verilated_dpi.o verilated_vpi.o verilated_threads.o Vtop__ALL.a   -Wl,-rpath,/usr/local/lib/python3.12/dist-packages/cocotb/libs -L/usr/local/lib/python3.12/dist-packages/cocotb/libs -lcocotbvpi_verilator  -pthread -lpthread -latomic   -o Vtop
+rm Vtop__ALL.verilator_deplist.tmp
+make[3]: Leaving directory '/work/sim_build'
+rm -f /work/results/add.xml
+MODULE=test_picorv32 TESTCASE= TOPLEVEL=tb_top TOPLEVEL_LANG=verilog \
+         /work/sim_build/Vtop  -Wno-fatal +hex=/work/sw/build/add.hex 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.030 2024-10-27
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /usr/local/lib/python3.12/dist-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790273190
+     0.00ns INFO     cocotb.regression                  Found test test_picorv32.run_single_test
+     0.00ns INFO     cocotb.regression                  running run_single_test (1/1)
+     0.00ns INFO     cocotb.tb_top                      running test add from /work/sw/build/add.hex
+ 21420.00ns INFO     cocotb.tb_top                      test add output: 'add..OK\n' (cycles=2043)
+ 21420.00ns INFO     cocotb.tb_top                      test add passed in 2043 cycles
+ 21420.00ns INFO     cocotb.regression                  run_single_test passed
+ 21420.00ns INFO     cocotb.regression                  ***************************************************************************************
+                                                        ** TEST                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************
+                                                        ** test_picorv32.run_single_test   PASS       21420.00           0.28      77350.04  **
+                                                        ***************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0               21420.00           0.42      50724.12  **
+                                                        ***************************************************************************************
+                                                        
+- :0: Verilog $finish
+make[2]: Leaving directory '/work/tb'
+make[1]: Leaving directory '/work/tb'

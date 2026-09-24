@@ -60,7 +60,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
                      , 0, ~0ULL);
     } else {
         VL_WRITEF_NX("tb_top: no +hex=<file> given, memory is empty\n",0);
-        VL_FINISH_MT("/home/jairussolomon/Desktop/Clustara/rtl/tb_top.v", 56, "");
+        VL_FINISH_MT("/work/rtl/tb_top.v", 56, "");
     }
     vlSelfRef.tb_top__DOT__cpu__DOT__mem_la_firstword = 0U;
     vlSelfRef.tb_top__DOT__cpu__DOT__mem_la_firstword_xfer = 0U;
@@ -96,7 +96,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vtop___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/home/jairussolomon/Desktop/Clustara/rtl/tb_top.v", 15, "", "Settle region did not converge.");
+            VL_FATAL_MT("/work/rtl/tb_top.v", 15, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;

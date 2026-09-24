@@ -40,7 +40,7 @@ VM_USER_CFLAGS = \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
-	-Wl,-rpath,/home/jairussolomon/Desktop/Clustara/.venv/lib/python3.10/site-packages/cocotb/libs -L/home/jairussolomon/Desktop/Clustara/.venv/lib/python3.10/site-packages/cocotb/libs -lcocotbvpi_verilator \
+	-Wl,-rpath,/usr/local/lib/python3.12/dist-packages/cocotb/libs -L/usr/local/lib/python3.12/dist-packages/cocotb/libs -lcocotbvpi_verilator \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
@@ -48,7 +48,7 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	../.venv/lib/python3.10/site-packages/cocotb/share/lib/verilator \
+	../../usr/local/lib/python3.12/dist-packages/cocotb/share/lib/verilator \
 	../tb \
 
 
@@ -61,7 +61,7 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-verilator.o: /home/jairussolomon/Desktop/Clustara/.venv/lib/python3.10/site-packages/cocotb/share/lib/verilator/verilator.cpp 
+verilator.o: /usr/local/lib/python3.12/dist-packages/cocotb/share/lib/verilator/verilator.cpp 
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST)  -c -o $@ $<
 
 ### Link rules... (from --exe)
